@@ -28,21 +28,22 @@
 int arr[] = {10,5,2,1,0};
 int size = 5;
 int smallest= INT8_MAX ;
+int largest = INT8_MIN;
 
-for (int i = 0; i <size ; i++)
-{
-        if (arr[i]<smallest) {
-                smallest = arr[1];
-        }
+for (int i = 0; i <size ; i++){
+        // if (arr[i]<smallest) {
+        //         smallest = arr[1];
+        // }
+        smallest= min(arr[i] , smallest);
+        largest = max(arr[i], largest);
+
         
+
+cout<<"smallest no. = "<<smallest<<endl;
+cout<<"largest no. = "<<largest<<endl;
+cout<<"index value of smallest"<< arr[largest] <<endl;
 }
-cout<<"smallest = "<<smallest<<endl;
-
-
-
-
-
-
         return 0;
     }
+
 
